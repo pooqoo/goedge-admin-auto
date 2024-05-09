@@ -5,10 +5,10 @@ ENV TZ "Asia/Shanghai"
 ARG VERSION
 ENV VERSION ${VERSION}
 ENV ROOT_DIR /usr/local/goedge
-ENV TAR_FILE edge-admin-linux-amd64-plus-v${VERSION}.zip
+ENV TAR_FILE edge-admin-linux-amd64-plus-${VERSION}.zip
 
 # remote official repository
-ENV TAR_URL "https://dl.goedge.cn/edge/v${VERSION}/edge-admin-linux-amd64-plus-v${VERSION}.zip"
+ENV TAR_URL "https://dl.goedge.cn/edge/${VERSION}/edge-admin-linux-amd64-plus-${VERSION}.zip"
 
 RUN apk add --no-cache tzdata wget unzip
 RUN mkdir ${ROOT_DIR}; \
